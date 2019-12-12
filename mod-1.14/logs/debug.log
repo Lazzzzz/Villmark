@@ -1,0 +1,3 @@
+[06déc.2019 20:18:10.563] [main/ERROR] [net.minecraft.server.dedicated.PropertyManager/]: Failed to load properties from file: server.properties
+[06déc.2019 20:18:10.861] [main/WARN] [net.minecraft.server.ServerEula/]: Failed to load eula.txt
+[06déc.2019 20:18:10.866] [main/INFO] [net.minecraft.server.MinecraftServer/]: You need to agree to the EULA in order to run the server. Go to eula.txt for more info.
