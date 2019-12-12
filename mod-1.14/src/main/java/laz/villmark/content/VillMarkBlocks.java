@@ -170,35 +170,13 @@ public class VillMarkBlocks {
 
 
 	public static void register(IEventBus bus) {
-		blocklist.put(VILLSTONE, "villstone");
-		blocklist.put(DEADWOOD, "deadwood");
-		blocklist.put(DEADPLANKS, "deadplanks");
-		blocklist.put(HELLSTONEFLESHED, "hellstonefleshed");
-		blocklist.put(HELLSTONE, "hellstone");
-		blocklist.put(FLESHSTONE,"fleshstone");
-		blocklist.put(DREADBONE, "deadbone");
-		blocklist.put(DRYROCK, "dryrock");
-		blocklist.put(BORELEC_BLOCK, "borelec_block");
-		blocklist.put(MIRRORIS_BLOCK, "mirroris_block");
-		blocklist.put(MIRRORIS_ORE, "mirroris_ore");
-		blocklist.put(BORELEC_ORE, "borelec_ore");
-		blocklist.put(VILLSANDROCK, "villsandrock");
-		blocklist.put(VILLSAND, "villsand");
-		blocklist.put(TASTONE, "tastone");
-		blocklist.put(SHIVAL_FLOOR, "shival_floor");
-		blocklist.put(SHIVAL_FLOOR_COLORED, "shival_floor_colored");
-		blocklist.put(SHIVAL_BRICKS, "shival_bricks");
-		blocklist.put(SHIVAL_BRICKS_COLORED, "shival_bricks_colored");
-		blocklist.put(SHIVAL_PILLAR, "shival_pillar");
-		blocklist.put(HELLSTONE_BRICKS, "hellstone_bricks");
-		blocklist.put(DREADBONE_BLOCK, "dreadbone_block");
-		blocklist.put(DREADBONE_BRICKS_SMOOTH, "deadbone_bricks_smooth");
-		blocklist.put(DREADBONE_BRICKS, "dreadbone_bricks");
-		blocklist.put(TASTONE_BRICKS, "tastone_bricks");
-		blocklist.put(FLESHSTONE_BRICKS, "fleshstone_bricks");
-		blocklist.put(DRYROCK_BRICKS, "drystone_bricks");
-		blocklist.put(VILLMARK_BEDROCK, "villmark_bedrock");
-		blocklist.put(DESERT_GRASS, "desert_grass");
+		blocklist.put(VILLSTONE, "villstone"); blocklist.put(DEADWOOD, "deadwood"); blocklist.put(DEADPLANKS, "deadplanks"); blocklist.put(HELLSTONEFLESHED, "hellstonefleshed"); blocklist.put(HELLSTONE, "hellstone");
+		blocklist.put(FLESHSTONE,"fleshstone"); blocklist.put(DREADBONE, "deadbone"); blocklist.put(DRYROCK, "dryrock"); blocklist.put(BORELEC_BLOCK, "borelec_block"); blocklist.put(MIRRORIS_BLOCK, "mirroris_block");
+		blocklist.put(MIRRORIS_ORE, "mirroris_ore"); blocklist.put(BORELEC_ORE, "borelec_ore"); blocklist.put(VILLSANDROCK, "villsandrock"); blocklist.put(VILLSAND, "villsand"); blocklist.put(TASTONE, "tastone");
+		blocklist.put(SHIVAL_FLOOR, "shival_floor"); blocklist.put(SHIVAL_FLOOR_COLORED, "shival_floor_colored"); blocklist.put(SHIVAL_BRICKS, "shival_bricks"); blocklist.put(SHIVAL_BRICKS_COLORED, "shival_bricks_colored");
+		blocklist.put(SHIVAL_PILLAR, "shival_pillar"); blocklist.put(HELLSTONE_BRICKS, "hellstone_bricks"); blocklist.put(DREADBONE_BLOCK, "dreadbone_block"); blocklist.put(DREADBONE_BRICKS_SMOOTH, "deadbone_bricks_smooth");
+		blocklist.put(DREADBONE_BRICKS, "dreadbone_bricks"); blocklist.put(TASTONE_BRICKS, "tastone_bricks"); blocklist.put(FLESHSTONE_BRICKS, "fleshstone_bricks"); blocklist.put(DRYROCK_BRICKS, "drystone_bricks");
+		blocklist.put(VILLMARK_BEDROCK, "villmark_bedrock"); blocklist.put(DESERT_GRASS, "desert_grass");
 
 
 		for(RegistryObject<Block> block: blocklist.keySet()){
@@ -208,6 +186,6 @@ public class VillMarkBlocks {
 		BLOCKS.register(bus);
 		ITEMS.register(bus);
 	}
-	
+
 }
 
