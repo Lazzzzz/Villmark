@@ -157,6 +157,13 @@ public class VillMarkBlocks {
 			.hardnessAndResistance(1.5f, 30f)
 	));
 
+	//Plants
+	//DeadBone
+	public static final RegistryObject<Block> DESERT_GRASS = BLOCKS.register("desert_grass", () -> new Block(Block.Properties.create(ORGANIC)
+			.sound(SoundType.STONE)
+			.hardnessAndResistance(0f, 0f)
+	));
+
 
 	public static void register(IEventBus bus) {
 		blocklist.add(VILLSTONE);
@@ -188,7 +195,7 @@ public class VillMarkBlocks {
 		blocklist.add(FLESHSTONE_BRICKS);
 		blocklist.add(DRYROCK_BRICKS);
 		blocklist.add(VILLMARK_BEDROCK);
-
+		blocklist.add(DESERT_GRASS);
 
 
 		int blocks = blocklist.size();
