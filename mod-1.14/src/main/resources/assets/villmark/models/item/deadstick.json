@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "villmark:item/deadstick"
+        "layer0": "villmark:items/deadstick"
     }
 }

@@ -1,10 +1,15 @@
 package laz.villmark.content;
 
-import java.util.ArrayList;
-import java.util.List;
+import static laz.villmark.VillMark.MOD_ID;
+import static net.minecraft.block.material.Material.ORGANIC;
+import static net.minecraft.block.material.Material.ROCK;
+import static net.minecraft.block.material.Material.SAND;
+import static net.minecraft.block.material.Material.WOOD;
+
 import java.util.Map;
 
 import com.google.common.collect.Maps;
+
 import laz.villmark.VillMark;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -14,9 +19,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import static laz.villmark.VillMark.MOD_ID;
-import static net.minecraft.block.material.Material.*;
 
 public class VillMarkBlocks {
 

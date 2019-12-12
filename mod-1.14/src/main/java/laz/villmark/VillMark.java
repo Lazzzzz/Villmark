@@ -23,7 +23,7 @@ public class VillMark {
 	public static final ItemGroup villMarkItemGroup = new VillMarkItemGroup();
 	
 	public VillMark() {
-		IEventBus bus =FMLJavaModLoadingContext.get().getModEventBus();
+		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		VillMarkItems.register(bus);
 		VillMarkBlocks.register(bus);
 		MinecraftForge.EVENT_BUS.register(this);
