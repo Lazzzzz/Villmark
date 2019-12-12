@@ -2,7 +2,9 @@ package laz.villmark.content;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import com.google.common.collect.Maps;
 import laz.villmark.VillMark;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -20,7 +22,7 @@ public class VillMarkBlocks {
 
 	private static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, MOD_ID);
 	private static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, MOD_ID);
-	public static List<RegistryObject<Block>> blocklist = new ArrayList<RegistryObject<Block>>();
+	public static Map<RegistryObject<Block>, String> blocklist = Maps.newHashMap();
 
 	//VillStone
 	public static final RegistryObject<Block> VILLSTONE = BLOCKS.register("villstone", () -> new Block(Block.Properties.create(ROCK)
@@ -166,41 +168,39 @@ public class VillMarkBlocks {
 
 
 	public static void register(IEventBus bus) {
-		blocklist.add(VILLSTONE);
-		blocklist.add(DEADWOOD);
-		blocklist.add(DEADPLANKS);
-		blocklist.add(HELLSTONEFLESHED);
-		blocklist.add(HELLSTONE);
-		blocklist.add(FLESHSTONE);
-		blocklist.add(DREADBONE);
-		blocklist.add(DRYROCK);
-		blocklist.add(BORELEC_BLOCK);
-		blocklist.add(MIRRORIS_BLOCK);
-		blocklist.add(MIRRORIS_ORE);
-		blocklist.add(BORELEC_ORE);
-		blocklist.add(VILLSANDROCK);
-		blocklist.add(VILLSAND);
-		blocklist.add(TASTONE);
-		blocklist.add(SHIVAL_FLOOR);
-		blocklist.add(SHIVAL_FLOOR_COLORED);
-		blocklist.add(SHIVAL_BRICKS);
-		blocklist.add(SHIVAL_BRICKS_COLORED);
-		blocklist.add(SHIVAL_PILLAR);
-		blocklist.add(HELLSTONE_BRICKS);
-		blocklist.add(DREADBONE_BLOCK);
-		blocklist.add(TASTONE);
-		blocklist.add(DREADBONE_BRICKS_SMOOTH);
-		blocklist.add(DREADBONE_BRICKS);
-		blocklist.add(TASTONE_BRICKS);
-		blocklist.add(FLESHSTONE_BRICKS);
-		blocklist.add(DRYROCK_BRICKS);
-		blocklist.add(VILLMARK_BEDROCK);
-		blocklist.add(DESERT_GRASS);
+		blocklist.put(VILLSTONE, "villstone");
+		blocklist.put(DEADWOOD, "deadwood");
+		blocklist.put(DEADPLANKS, "deadplanks");
+		blocklist.put(HELLSTONEFLESHED, "hellstonefleshed");
+		blocklist.put(HELLSTONE, "hellstone");
+		blocklist.put(FLESHSTONE,"fleshstone");
+		blocklist.put(DREADBONE, "deadbone");
+		blocklist.put(DRYROCK, "dryrock");
+		blocklist.put(BORELEC_BLOCK, "borelec_block");
+		blocklist.put(MIRRORIS_BLOCK, "mirroris_block");
+		blocklist.put(MIRRORIS_ORE, "mirroris_ore");
+		blocklist.put(BORELEC_ORE, "borelec_ore");
+		blocklist.put(VILLSANDROCK, "villsandrock");
+		blocklist.put(VILLSAND, "villsand");
+		blocklist.put(TASTONE, "tastone");
+		blocklist.put(SHIVAL_FLOOR, "shival_floor");
+		blocklist.put(SHIVAL_FLOOR_COLORED, "shival_floor_colored");
+		blocklist.put(SHIVAL_BRICKS, "shival_bricks");
+		blocklist.put(SHIVAL_BRICKS_COLORED, "shival_bricks_colored");
+		blocklist.put(SHIVAL_PILLAR, "shival_pillar");
+		blocklist.put(HELLSTONE_BRICKS, "hellstone_bricks");
+		blocklist.put(DREADBONE_BLOCK, "dreadbone_block");
+		blocklist.put(DREADBONE_BRICKS_SMOOTH, "deadbone_bricks_smooth");
+		blocklist.put(DREADBONE_BRICKS, "dreadbone_bricks");
+		blocklist.put(TASTONE_BRICKS, "tastone_bricks");
+		blocklist.put(FLESHSTONE_BRICKS, "fleshstone_bricks");
+		blocklist.put(DRYROCK_BRICKS, "drystone_bricks");
+		blocklist.put(VILLMARK_BEDROCK, "villmark_bedrock");
+		blocklist.put(DESERT_GRASS, "desert_grass");
 
 
-		int blocks = blocklist.size();
-		for(RegistryObject<Block> block: blocklist.subList(0, blocks)){
-			ITEMS.register(block.toString(),() -> new BlockItem(block.get(), new Item.Properties().group(VillMark.villMarkItemGroup)));
+		for(RegistryObject<Block> block: blocklist.keySet()){
+			ITEMS.register(blocklist.get(block),() -> new BlockItem(block.get(), new Item.Properties().group(VillMark.villMarkItemGroup)));
 		}
 
 		BLOCKS.register(bus);
