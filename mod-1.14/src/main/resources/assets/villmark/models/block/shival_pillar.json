@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "villmark:blocks/shival_pillar_top",
+    "end": "villmark:blocks/shival_floor",
     "side": "villmark:blocks/shival_pillar"
   }
 }
