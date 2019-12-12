@@ -23,7 +23,6 @@ public class VillMarkBlocks {
 	public static List<RegistryObject<Block>> blocklist = new ArrayList<RegistryObject<Block>>();
 
 	//Stone
-
 	public static final RegistryObject<Block> VILLSTONE = BLOCKS.register("villstone", () -> new Block(Block.Properties.create(ROCK)
 			.sound(SoundType.STONE)
 			.hardnessAndResistance(1.5f, 30f)
@@ -53,6 +52,27 @@ public class VillMarkBlocks {
 			.hardnessAndResistance(2f, 40f)
 	));
 
+	//Shival Blocks
+	public static final RegistryObject<Block> SHIVAL_FLOOR = BLOCKS.register("shival_floor", () -> new Block(Block.Properties.create(ROCK)
+			.sound(SoundType.STONE)
+			.hardnessAndResistance(2f, 40f)
+	));
+	public static final RegistryObject<Block> SHIVAL_FLOOR_COLORED = BLOCKS.register("shival_floor_colored", () -> new Block(Block.Properties.create(ROCK)
+			.sound(SoundType.STONE)
+			.hardnessAndResistance(2f, 40f)
+	));
+	public static final RegistryObject<Block> SHIVAL_BRICKS = BLOCKS.register("shival_bricks", () -> new Block(Block.Properties.create(ROCK)
+			.sound(SoundType.STONE)
+			.hardnessAndResistance(2f, 40f)
+	));
+	public static final RegistryObject<Block> SHIVAL_BRICKS_COLORED = BLOCKS.register("shival_bricks_colored", () -> new Block(Block.Properties.create(ROCK)
+			.sound(SoundType.STONE)
+			.hardnessAndResistance(2f, 40f)
+	));
+	public static final RegistryObject<Block> SHIVAL_PILLAR = BLOCKS.register("shival_pillar", () -> new Block(Block.Properties.create(ROCK)
+			.sound(SoundType.STONE)
+			.hardnessAndResistance(2f, 40f)
+	));
 
 	//Wood
 
@@ -114,6 +134,17 @@ public class VillMarkBlocks {
 		blocklist.add(VILLSANDROCK);
 		blocklist.add(VILLSAND);
 		blocklist.add(TASTONE);
+		blocklist.add(SHIVAL_FLOOR);
+		blocklist.add(SHIVAL_FLOOR_COLORED);
+		blocklist.add(SHIVAL_BRICKS);
+		blocklist.add(SHIVAL_BRICKS_COLORED);
+		blocklist.add(SHIVAL_PILLAR);
+
+
+
+
+
+
 
 		int blocks = blocklist.size();
 		for(RegistryObject<Block> block: blocklist.subList(0, blocks)){

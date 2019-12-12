@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y":  { "model": "villmark:block/shival_pillar" },
+    "axis=z":   { "model": "villmark:block/shival_pillar", "x": 90 },
+    "axis=x":   { "model": "villmark:block/shival_pillar", "x": 90, "y": 90 }
+  }
+}
