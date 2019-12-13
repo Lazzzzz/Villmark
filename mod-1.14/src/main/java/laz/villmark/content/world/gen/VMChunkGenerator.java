@@ -52,7 +52,7 @@ public class VMChunkGenerator extends NoiseChunkGenerator<VMGenSettings>
 	
 	@Override
 	public void spawnMobs(WorldGenRegion region) 
-	{
+     {
 		int i = region.getMainChunkX();
 		int j = region.getMainChunkZ();
 		Biome biome = region.getChunk(i, j).getBiomes()[0];

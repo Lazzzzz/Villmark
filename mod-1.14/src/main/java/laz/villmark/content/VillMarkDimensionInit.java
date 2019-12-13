@@ -38,7 +38,7 @@ public class VillMarkDimensionInit {
     public static void onDimensionModRegistry(final RegistryEvent.Register<ModDimension> event) {
         event.getRegistry().register(VillMarkDimensionInit.villmark);
         DimensionManager.registerDimension(new ResourceLocation(VillMark.MOD_ID, "villmark_dim"), VillMarkDimensionInit.villmark, null, true);
-        VillMark.logger.info("Dimension done");
+        VillMark.logger.info("AAAAAA: Dimension registered");
     
     }
 
