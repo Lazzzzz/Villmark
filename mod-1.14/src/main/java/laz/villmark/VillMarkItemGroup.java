@@ -1,11 +1,10 @@
 package laz.villmark;
 
-import laz.villmark.content.VillMarkBlocks;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-
 import static laz.villmark.VillMark.MOD_ID;
 import static laz.villmark.content.VillMarkBlocks.VILLSTONE;
+
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 
 public class VillMarkItemGroup extends ItemGroup{
 

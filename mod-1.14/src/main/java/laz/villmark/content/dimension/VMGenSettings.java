@@ -1,4 +1,4 @@
-package laz.villmark.content.world.gen;
+package laz.villmark.content.dimension;
 
 import net.minecraft.world.gen.OverworldGenSettings;
 
@@ -21,7 +21,7 @@ public class VMGenSettings extends OverworldGenSettings
 	
 	public int getSeaLevel() 
 	{
-		return 0;
+		return 63;
 	}
 	
 	public double getDepthNoiseScaleX() 

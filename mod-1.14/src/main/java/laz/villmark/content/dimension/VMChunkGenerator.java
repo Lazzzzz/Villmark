@@ -1,12 +1,6 @@
-package laz.villmark.content.world.gen;
+package laz.villmark.content.dimension;
 
-
-import java.util.List;
-
-import net.minecraft.entity.EntityClassification;
-import net.minecraft.util.SharedSeedRandom;
 import net.minecraft.util.Util;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.WorldType;
@@ -14,13 +8,6 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.provider.BiomeProvider;
 import net.minecraft.world.gen.NoiseChunkGenerator;
 import net.minecraft.world.gen.OctavesNoiseGenerator;
-import net.minecraft.world.gen.WorldGenRegion;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.spawner.CatSpawner;
-import net.minecraft.world.spawner.PatrolSpawner;
-import net.minecraft.world.spawner.PhantomSpawner;
-import net.minecraft.world.spawner.WorldEntitySpawner;
 
 public class VMChunkGenerator extends NoiseChunkGenerator<VMGenSettings>
 {
@@ -38,9 +25,6 @@ public class VMChunkGenerator extends NoiseChunkGenerator<VMGenSettings>
 	
 	private final OctavesNoiseGenerator depthNoise;
 	private final boolean field_222577_j;
-	private final PhantomSpawner phantomSpawner = new PhantomSpawner();
-	private final PatrolSpawner patrolSpawner = new PatrolSpawner();
-	private final CatSpawner catSpawner = new CatSpawner();
 
 	public VMChunkGenerator(IWorld world, BiomeProvider provider, VMGenSettings settingsIn) 
 	{
@@ -50,17 +34,7 @@ public class VMChunkGenerator extends NoiseChunkGenerator<VMGenSettings>
 		this.field_222577_j = world.getWorldInfo().getGenerator() == WorldType.AMPLIFIED;
 	}
 	
-	@Override
-	public void spawnMobs(WorldGenRegion region) 
-     {
-		int i = region.getMainChunkX();
-		int j = region.getMainChunkZ();
-		Biome biome = region.getChunk(i, j).getBiomes()[0];
-		SharedSeedRandom sharedseedrandom = new SharedSeedRandom();
-		sharedseedrandom.setDecorationSeed(region.getSeed(), i << 4, j << 4);
-		WorldEntitySpawner.performWorldGenSpawning(region, biome, i, j, sharedseedrandom);
-	}
-	
+
 	@Override
 	protected void func_222548_a(double[] p_222548_1_, int p_222548_2_, int p_222548_3_) 
 	{
@@ -148,44 +122,6 @@ public class VMChunkGenerator extends NoiseChunkGenerator<VMGenSettings>
 		return d0;
 	}
 	
-	@Override
-	public List<Biome.SpawnListEntry> getPossibleCreatures(EntityClassification creatureType, BlockPos pos) 
-	{
-		if (Feature.SWAMP_HUT.func_202383_b(this.world, pos)) 
-		{
-			if (creatureType == EntityClassification.MONSTER) 
-			{
-				return Feature.SWAMP_HUT.getSpawnList();
-			}
-	
-			if (creatureType == EntityClassification.CREATURE) 
-			{
-				return Feature.SWAMP_HUT.getCreatureSpawnList();
-			}
-		} 
-		else if (creatureType == EntityClassification.MONSTER) 
-		{
-			if (Feature.PILLAGER_OUTPOST.isPositionInStructure(this.world, pos)) 
-			{
-				return Feature.PILLAGER_OUTPOST.getSpawnList();
-			}
-	
-			if (Feature.OCEAN_MONUMENT.isPositionInStructure(this.world, pos)) 
-			{
-				return Feature.OCEAN_MONUMENT.getSpawnList();
-			}
-		}
-	
-		return super.getPossibleCreatures(creatureType, pos);
-	}
-	
-	@Override
-	public void spawnMobs(ServerWorld worldIn, boolean spawnHostileMobs, boolean spawnPeacefulMobs) 
-	{
-		this.phantomSpawner.tick(worldIn, spawnHostileMobs, spawnPeacefulMobs);
-		this.patrolSpawner.tick(worldIn, spawnHostileMobs, spawnPeacefulMobs);
-		this.catSpawner.tick(worldIn, spawnHostileMobs, spawnPeacefulMobs);
-	}
 	
 	@Override
 	public int getGroundHeight() 
@@ -196,6 +132,6 @@ public class VMChunkGenerator extends NoiseChunkGenerator<VMGenSettings>
 	@Override
 	public int getSeaLevel() 
 	{
-		return 63;
+		return 0;
 	}
 }
