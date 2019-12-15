@@ -26,7 +26,7 @@ public class BetterBiomeProvider extends BiomeProvider {
     private final Biome[] biomes;
 
     public BetterBiomeProvider(OverworldBiomeProviderSettings settings) {
-        this.biomes = new Biome[]{Biomes.OCEAN, Biomes.PLAINS, Biomes.DESERT};
+        this.biomes = new Biome[]{Biomes.ICE_SPIKES};
         WorldInfo lvt_2_1_ = settings.getWorldInfo();
         OverworldGenSettings lvt_3_1_ = settings.getGeneratorSettings();
         Layer[] lvt_4_1_ = LayerUtil.buildOverworldProcedure(lvt_2_1_.getSeed(), lvt_2_1_.getGenerator(), lvt_3_1_);

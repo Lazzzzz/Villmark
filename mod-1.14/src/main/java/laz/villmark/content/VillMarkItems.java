@@ -1,5 +1,7 @@
 package laz.villmark.content;
 
+import static laz.villmark.VillMark.MOD_ID;
+
 import laz.villmark.VillMark;
 import laz.villmark.items.TeleporterItem;
 import net.minecraft.item.Item;
@@ -7,8 +9,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import static laz.villmark.VillMark.MOD_ID;
 
 
 public class VillMarkItems {
