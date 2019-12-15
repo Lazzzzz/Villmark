@@ -1,5 +1,11 @@
 {
     "variants": {
-        "": { "model": "villmark:block/villsandrock" }
+        "": [
+            { "model": "villmark:block/villsandrock" },
+            { "model": "villmark:block/villsandrock", "y": 90 },
+            { "model": "villmark:block/villsandrock", "y": 180 },
+            { "model": "villmark:block/villsandrock", "y": 270 }
+        ]
     }
 }
+
