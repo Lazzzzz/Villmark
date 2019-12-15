@@ -13,9 +13,9 @@ import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 
-public class BiomeFieryLand extends Biome{
+public class BiomeDeadBushForest extends Biome{
 
-	public BiomeFieryLand() {
+	public BiomeDeadBushForest() {
 		super((new Biome.Builder())
 			.surfaceBuilder(new ConfiguredSurfaceBuilder<SurfaceBuilderConfig>(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(Blocks.SAND.getDefaultState(), Blocks.SANDSTONE.getDefaultState(), Blocks.AIR.getDefaultState())))
 			.precipitation(RainType.NONE)
